@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudLens - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F172A",
+              secondary: "#06B6D4",
+              undefined: {
+                500: "#7C3AED",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-primary"
+          >CloudLens</a
+        >
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="index.html" class="text-gray-600 hover:text-secondary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="concepts.html" class="text-gray-600 hover:text-secondary"
+                >Core Concepts</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="text-gray-600 hover:text-secondary"
+                >Service Explorer</a
+              >
+            </li>
+            <li>
+              <a href="quiz.html" class="text-gray-600 hover:text-secondary"
+                >Quiz</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="text-secondary font-medium">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-6 text-primary">
+          About CloudLens
+        </h1>
+
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <div
+              class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center"
+            >
+              <i
+                data-feather="cloud"
+                class="text-undefined-500"
+                style="width: 120px; height: 120px"
+              ></i>
+            </div>
+          </div>
+          <div>
+            <p class="text-lg text-gray-700 mb-6">
+              CloudLens was created by a cloud computing student to help fellow
+              learners navigate the complex world of cloud technologies. The
+              goal is to break down intimidating topics into clear,
+              understandable pieces.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+              This site is a living project and will continue to grow with new
+              content. We're constantly adding new concepts, services, and
+              interactive features to help you master cloud computing.
+            </p>
+            <div class="flex space-x-4">
+              <div class="bg-undefined-500 text-white py-2 px-4 rounded-lg">
+                Interactive Learning
+              </div>
+              <div class="bg-secondary text-white py-2 px-4 rounded-lg">
+                Student-Centric
+              </div>
+              <div class="bg-primary text-white py-2 px-4 rounded-lg">
+                Always Evolving
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2024 CloudLens. Built for Cloud Computing Students.</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudLens - Core Concepts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F172A",
+              secondary: "#06B6D4",
+              undefined: {
+                500: "#7C3AED",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-primary"
+          >CloudLens</a
+        >
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="index.html" class="text-gray-600 hover:text-secondary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="concepts.html" class="text-secondary font-medium"
+                >Core Concepts</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="text-gray-600 hover:text-secondary"
+                >Service Explorer</a
+              >
+            </li>
+            <li>
+              <a href="quiz.html" class="text-gray-600 hover:text-secondary"
+                >Quiz</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-600 hover:text-secondary"
+                >About</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-6 text-primary">
+          Core Concepts of Cloud Computing
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
+          Before diving into specific services, it's crucial to understand the
+          foundational models and concepts that define the cloud.
+        </p>
+
+        <div class="max-w-3xl mx-auto">
+          <!-- Accordion 1 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 text-left font-bold text-lg text-primary accordion-header"
+            >
+              <span>Infrastructure as a Service (IaaS)</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden p-6 bg-gray-50">
+              <p class="mb-3">
+                <strong>Definition:</strong> IaaS provides virtualized computing
+                resources over the internet, including servers, storage, and
+                networking.
+              </p>
+              <p>
+                <strong>Analogy:</strong> IaaS is like renting a plot of land
+                and building your own house. You have total control but also all
+                the maintenance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 2 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 text-left font-bold text-lg text-primary accordion-header"
+            >
+              <span>Platform as a Service (PaaS)</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden p-6 bg-gray-50">
+              <p class="mb-3">
+                <strong>Definition:</strong> PaaS provides a platform allowing
+                customers to develop, run, and manage applications without
+                dealing with the infrastructure.
+              </p>
+              <p>
+                <strong>Analogy:</strong> PaaS is like renting a fully furnished
+                apartment. You can decorate and arrange as you like, but the
+                building maintenance is handled for you.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 3 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 text-left font-bold text-lg text-primary accordion-header"
+            >
+              <span>Software as a Service (SaaS)</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden p-6 bg-gray-50">
+              <p class="mb-3">
+                <strong>Definition:</strong> SaaS delivers software applications
+                over the internet, on a subscription basis.
+              </p>
+              <p>
+                <strong>Analogy:</strong> SaaS is like renting a car. You get to
+                use it immediately without worrying about maintenance,
+                insurance, or repairs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 text-left font-bold text-lg text-primary accordion-header"
+            >
+              <span>Public vs. Private vs. Hybrid Cloud</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden p-6 bg-gray-50">
+              <p class="mb-3">
+                <strong>Definition:</strong> Public clouds are owned by
+                third-party providers, private clouds are dedicated to a single
+                organization, and hybrid clouds combine both.
+              </p>
+              <p>
+                <strong>Analogy:</strong> Public cloud is like a public library,
+                private cloud is like your personal home library, and hybrid is
+                like having both with books distributed between them.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 5 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 text-left font-bold text-lg text-primary accordion-header"
+            >
+              <span>Virtualization</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden p-6 bg-gray-50">
+              <p class="mb-3">
+                <strong>Definition:</strong> Virtualization is the creation of a
+                virtual version of something, such as a server, storage device,
+                or network resource.
+              </p>
+              <p>
+                <strong>Analogy:</strong> Virtualization is like dividing a
+                large pizza into slices. Each slice is a virtual machine that
+                can be customized independently.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion 6 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 text-left font-bold text-lg text-primary accordion-header"
+            >
+              <span>Serverless Computing</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden p-6 bg-gray-50">
+              <p class="mb-3">
+                <strong>Definition:</strong> Serverless computing allows
+                developers to build and run applications without managing
+                servers.
+              </p>
+              <p>
+                <strong>Analogy:</strong> Serverless is like hiring a catering
+                service for an event. You only pay for the food consumed, and
+                the caterer handles all preparation and cleanup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2024 CloudLens. Built for Cloud Computing Students.</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+
+      // Accordion functionality
+      document.querySelectorAll(".accordion-header").forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector(".accordion-icon");
+
+          content.classList.toggle("hidden");
+          if (content.classList.contains("hidden")) {
+            icon.setAttribute("data-feather", "chevron-down");
+          } else {
+            icon.setAttribute("data-feather", "chevron-up");
+          }
+          feather.replace();
+        });
+      });
+    </script>
+  </body>
+</html>

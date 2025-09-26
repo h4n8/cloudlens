@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudLens - Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F172A",
+              secondary: "#06B6D4",
+              undefined: {
+                500: "#7C3AED",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-primary"
+          >CloudLens</a
+        >
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="index.html" class="text-gray-600 hover:text-secondary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="concepts.html" class="text-gray-600 hover:text-secondary"
+                >Core Concepts</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="text-gray-600 hover:text-secondary"
+                >Service Explorer</a
+              >
+            </li>
+            <li>
+              <a href="quiz.html" class="text-secondary font-medium">Quiz</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-600 hover:text-secondary"
+                >About</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-6 text-primary">
+          Cloud Knowledge Quiz
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
+          Test your understanding of cloud concepts. Select the best answer for
+          each question.
+        </p>
+
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm">
+          <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="mb-10 question-block">
+              <h3 class="text-xl font-bold mb-4 text-primary">
+                1. What does IaaS stand for?
+              </h3>
+              <div class="space-y-3">
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q1" value="A" class="mr-3" />
+                  <span>Internet as a Service</span>
+                </label>
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q1" value="B" class="mr-3" />
+                  <span>Infrastructure as a Service</span>
+                </label>
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q1" value="C" class="mr-3" />
+                  <span>Integration as a Service</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="mb-10 question-block">
+              <h3 class="text-xl font-bold mb-4 text-primary">
+                2. Which service is an example of PaaS?
+              </h3>
+              <div class="space-y-3">
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q2" value="A" class="mr-3" />
+                  <span>Amazon S3 (Storage)</span>
+                </label>
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q2" value="B" class="mr-3" />
+                  <span>Microsoft Azure App Service</span>
+                </label>
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q2" value="C" class="mr-3" />
+                  <span>Google Docs</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="mb-10 question-block">
+              <h3 class="text-xl font-bold mb-4 text-primary">
+                3. What is the main benefit of a serverless architecture?
+              </h3>
+              <div class="space-y-3">
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q3" value="A" class="mr-3" />
+                  <span>It uses physical servers without electricity.</span>
+                </label>
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q3" value="B" class="mr-3" />
+                  <span
+                    >The cloud provider manages the server infrastructure
+                    dynamically.</span
+                  >
+                </label>
+                <label
+                  class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+                >
+                  <input type="radio" name="q3" value="C" class="mr-3" />
+                  <span>It is always cheaper than other options.</span>
+                </label>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              id="submitQuiz"
+              class="w-full bg-undefined-500 hover:bg-purple-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+            >
+              Check My Answers
+            </button>
+          </form>
+
+          <!-- Results Section -->
+          <div
+            id="quizResults"
+            class="hidden mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-primary">Quiz Results</h3>
+            <p class="text-lg mb-4">
+              You scored
+              <span id="score" class="font-bold text-undefined-500">0</span> out
+              of 3!
+            </p>
+            <p class="mb-6">
+              Great job! Review the
+              <a
+                href="concepts.html"
+                class="text-secondary font-medium hover:underline"
+                >Core Concepts</a
+              >
+              page to strengthen your knowledge.
+            </p>
+            <button
+              id="retakeQuiz"
+              class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-300"
+            >
+              Retake Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2024 CloudLens. Built for Cloud Computing Students.</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+
+      document
+        .getElementById("submitQuiz")
+        .addEventListener("click", function () {
+          const form = document.getElementById("quizForm");
+          const answers = {
+            q1: "B",
+            q2: "B",
+            q3: "B",
+          };
+
+          let score = 0;
+
+          // Check each answer
+          for (const [question, correctAnswer] of Object.entries(answers)) {
+            const selected = form.querySelector(
+              `input[name="${question}"]:checked`
+            );
+            if (selected && selected.value === correctAnswer) {
+              score++;
+            }
+          }
+
+          // Display results
+          document.getElementById("score").textContent = score;
+          document.getElementById("quizResults").classList.remove("hidden");
+
+          // Scroll to results
+          document
+            .getElementById("quizResults")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("retakeQuiz")
+        .addEventListener("click", function () {
+          // Reset form
+          document.getElementById("quizForm").reset();
+
+          // Hide results
+          document.getElementById("quizResults").classList.add("hidden");
+
+          // Scroll to top
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+  </body>
+</html>

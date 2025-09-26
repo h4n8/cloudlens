@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudLens - Service Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F172A",
+              secondary: "#06B6D4",
+              undefined: {
+                500: "#7C3AED",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-primary"
+          >CloudLens</a
+        >
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="index.html" class="text-gray-600 hover:text-secondary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="concepts.html" class="text-gray-600 hover:text-secondary"
+                >Core Concepts</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="text-secondary font-medium"
+                >Service Explorer</a
+              >
+            </li>
+            <li>
+              <a href="quiz.html" class="text-gray-600 hover:text-secondary"
+                >Quiz</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-600 hover:text-secondary"
+                >About</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-6 text-primary">
+          Cloud Service Explorer
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
+          Major cloud providers offer a vast array of services. Here are some of
+          the most fundamental ones categorized by function.
+        </p>
+
+        <!-- Tabs -->
+        <div class="max-w-4xl mx-auto mb-10">
+          <div class="flex border-b border-gray-200">
+            <button
+              class="tab-button py-3 px-6 font-medium text-primary border-b-2 border-undefined-500 active"
+            >
+              Compute
+            </button>
+            <button
+              class="tab-button py-3 px-6 font-medium text-gray-500 hover:text-primary"
+            >
+              Storage
+            </button>
+            <button
+              class="tab-button py-3 px-6 font-medium text-gray-500 hover:text-primary"
+            >
+              Databases
+            </button>
+            <button
+              class="tab-button py-3 px-6 font-medium text-gray-500 hover:text-primary"
+            >
+              Networking
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="max-w-6xl mx-auto">
+          <!-- Compute Tab -->
+          <div class="tab-content active">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card 1 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">AWS EC2</h3>
+                  <span
+                    class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded"
+                    >AWS</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Provides scalable virtual servers in the cloud.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Running web servers</li>
+                  <li class="mb-1">• Hosting applications</li>
+                  <li>• High-performance computing</li>
+                </ul>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Azure Virtual Machines
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded"
+                    >Azure</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  On-demand, scalable computing resources in Microsoft's cloud.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Development and testing</li>
+                  <li class="mb-1">• Running enterprise applications</li>
+                  <li>• Disaster recovery</li>
+                </ul>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Google Compute Engine
+                  </h3>
+                  <span
+                    class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded"
+                    >GCP</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  High-performance virtual machines running on Google's
+                  infrastructure.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Data analytics</li>
+                  <li class="mb-1">• Machine learning workloads</li>
+                  <li>• High-performance computing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Storage Tab -->
+          <div class="tab-content hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card 1 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">Amazon S3</h3>
+                  <span
+                    class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded"
+                    >AWS</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Object storage built to store and retrieve any amount of data.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Backup and restore</li>
+                  <li class="mb-1">• Data archiving</li>
+                  <li>• Content distribution</li>
+                </ul>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Azure Blob Storage
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded"
+                    >Azure</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Massively scalable object storage for unstructured data.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Serving images/videos</li>
+                  <li class="mb-1">• Backup and restore</li>
+                  <li>• Big data analytics</li>
+                </ul>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Google Cloud Storage
+                  </h3>
+                  <span
+                    class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded"
+                    >GCP</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Unified object storage for developers and enterprises.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Data lakes</li>
+                  <li class="mb-1">• Website hosting</li>
+                  <li>• Backup and archive</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases Tab -->
+          <div class="tab-content hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card 1 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">Amazon RDS</h3>
+                  <span
+                    class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded"
+                    >AWS</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Managed relational database service for MySQL, PostgreSQL, and
+                  more.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Web applications</li>
+                  <li class="mb-1">• E-commerce platforms</li>
+                  <li>• Data warehousing</li>
+                </ul>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Azure SQL Database
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded"
+                    >Azure</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Managed SQL database service in the cloud.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Modern cloud applications</li>
+                  <li class="mb-1">• Migration from on-premises</li>
+                  <li>• Business intelligence</li>
+                </ul>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Google Cloud SQL
+                  </h3>
+                  <span
+                    class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded"
+                    >GCP</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Fully managed database service for MySQL, PostgreSQL, and SQL
+                  Server.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Web and mobile apps</li>
+                  <li class="mb-1">• Enterprise applications</li>
+                  <li>• Data analysis</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Networking Tab -->
+          <div class="tab-content hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card 1 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">Amazon VPC</h3>
+                  <span
+                    class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded"
+                    >AWS</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Logically isolated section of the AWS Cloud where you can
+                  launch resources.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Network isolation</li>
+                  <li class="mb-1">• Hybrid cloud connectivity</li>
+                  <li>• Multi-tier applications</li>
+                </ul>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Azure Virtual Network
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded"
+                    >Azure</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Fundamental building block for your private network in Azure.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Secure communication</li>
+                  <li class="mb-1">• Internet access control</li>
+                  <li>• Multi-site connectivity</li>
+                </ul>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-primary">
+                    Google Cloud VPC
+                  </h3>
+                  <span
+                    class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded"
+                    >GCP</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Global private network for your Google Cloud resources.
+                </p>
+                <ul class="text-sm text-gray-600">
+                  <li class="mb-1">• Multi-region deployments</li>
+                  <li class="mb-1">• Secure hybrid connectivity</li>
+                  <li>• Network segmentation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2024 CloudLens. Built for Cloud Computing Students.</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+
+      // Tab functionality
+      document.querySelectorAll(".tab-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons and contents
+          document.querySelectorAll(".tab-button").forEach((btn) => {
+            btn.classList.remove(
+              "text-primary",
+              "border-undefined-500",
+              "active"
+            );
+            btn.classList.add("text-gray-500");
+          });
+
+          document.querySelectorAll(".tab-content").forEach((content) => {
+            content.classList.add("hidden");
+          });
+
+          // Add active class to clicked button
+          button.classList.add(
+            "text-primary",
+            "border-undefined-500",
+            "active"
+          );
+          button.classList.remove("text-gray-500");
+
+          // Show corresponding content
+          const index = Array.from(
+            document.querySelectorAll(".tab-button")
+          ).indexOf(button);
+          document
+            .querySelectorAll(".tab-content")
+            [index].classList.remove("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
